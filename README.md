@@ -1,1 +1,3 @@
 # midproject-IronHack
+
+Structure:
