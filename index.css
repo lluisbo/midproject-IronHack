@@ -1,0 +1,49 @@
+/* CSS*/
+
+:root {
+  --blue-dark: #072ac8;
+  --accent: #43d2ff;
+  --blue-light: #a2d6f9;
+  --blue-extralight: #d1edff;
+  --neutral-dark: #292e47;
+  --grey: #6b708d;
+  --light-white: #f2f4fc;
+  --blue-extra-light: #ecf7ff;
+  --secundary-one: #ffc600;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--neutral-dark);
+}
+.background {
+  background-color: #e5e5e5;
+}
+
+/* Font-size & Weight*/
+
+.text-regular {
+  font-weight: 200;
+}
+.text-medium {
+  font-size: medium;
+}
+
+h1,
+h2,
+h3,
+h4,
+.body-intro,
+.headline-text {
+  font-weight: bold;
+}
+
+/* HEADLINES */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
+  color: --blue(#514d67);
+}
