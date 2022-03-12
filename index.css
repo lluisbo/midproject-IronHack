@@ -1,31 +1,44 @@
-/* CSS*/
+/***** CSS *****/
 
 :root {
-  --blue-dark: #072ac8;
   --accent: #43d2ff;
+  --blue-dark: #072ac8;
   --blue-light: #a2d6f9;
   --blue-extralight: #d1edff;
-  --neutral-dark: #292e47;
+  --blue-extra-light: #ecf7ff;
   --grey: #6b708d;
   --light-white: #f2f4fc;
-  --blue-extra-light: #ecf7ff;
+  --neutral-dark: #292e47;
+  --neutral-medium: #6B708D;
   --secundary-one: #ffc600;
   --white: #ffffff;
+
+  --body-text-mobile: 1.25em;
+  --headline-medium-mobile: 1em; 
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  color: var(--neutral-dark);
-}
-.background {
   background-color: #e5e5e5;
+  border: none; 
+  color: var(--neutral-dark); 
+  font-family: "Roboto", sans-serif;  
+  margin: 0;
+  padding: 0;
 }
 
-/* Font-size & Weight*/
+.left-margin {
+  margin-left: 10%;
+}
 
+/***** FONT-SIZE & WEIGHT *****/
 .text-regular {
   font-weight: 200;
 }
+
 .text-medium {
   font-size: medium;
 }
@@ -39,11 +52,206 @@ h4,
   font-weight: bold;
 }
 
-/* HEADLINES */
-h1,
+/**** HEADLINES *****/
+
+h1 {
+  font-size: 3.75em;
+  color: var(--neutral-dark)
+}
+
+p,
 h2,
 h3,
 h4 {
-  font-family: "Roboto", sans-serif;
-  color: --blue(#514d67);
+  color: var(--neutral-medium);
+  font-family: "Roboto", sans-serif;  
+}
+a {
+  color: #6b708d;
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--blue-dark);
+  border-color: #072ac8;
+  color: var(--white);
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+  height: 52px;
+  text-align: center;
+  width: 150px;
+}
+
+/***** CSS FLEX ******/
+
+.section-flex {
+  display: flex;
+}
+
+.flex-direction {
+  display: row;
+}
+
+.inline-block {
+  display: inline-block;
+}
+/***** HEADER *****/
+
+header {
+  align-items: baseline;
+  justify-content: space-between;
+  height: 120px;
+  width: 100%;
+  
+}
+
+.logo {
+  width: 30%;
+  padding-top: 86px;
+  margin-left: 7%;
+}
+
+.nav-bar {
+  height: 22px;
+  width: 100%;
+  align-content: center;
+}
+
+.nav-bar li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.nav-bar a {
+  color: var(--neutral-medium);
+  text-decoration: none;
+}
+.nav-bar a:hover {
+  color: var(--blue-dark)
+}
+.nav-bar a:focus {
+  color: var(--blue-dark)
+}
+
+.contact-btn {
+  margin-right: 0;
+}
+/*
+/***** HERO *****/
+
+ /* HERO SECTION*/
+/*.hero-section {
+  display: flex;
+  flex-direction: row;
+  height: 650px;
+  width: 1440px;
+}
+
+/*.hero-wrap {
+  display: flex;
+  flex-direction: row;
+
+}
+
+/* CONTENT SECTION LEFT*/
+/*.hero-content {
+  height: 422px;
+  padding-top: 109px;
+  width: 530px;
+}
+
+/*#hero-title {
+  border: 1px solid black;
+  height: 210px;
+  width: 530px;
+}
+
+/*.hero-p {
+  border: 1px solid black;
+  height: 90px;
+  width: 430px;
+  font-size: 20px;
+}*/
+
+ /*IMG SECTION RIHGT*/
+ /*.hero-img {
+   height: 650px;
+   width: 570px;
+   border: 1px solid black;
+ }*/
+
+ /**********  MOBILE RESPONSIVE **********/
+             /***** HOME *****/
+               /** HEADER **/
+  @media (min-width: 481px) and (max-width: 767px) {
+    body {
+      padding: 0;
+      margin-left: 0;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      border-bottom: #072ac8 3px solid;
+    }
+
+    .logo {
+      margin-left: 0.6em;
+      width: 47%;
+      max-width: 60%;
+      padding-top: 1em;
+      padding-bottom: 0.5em;
+    }
+
+    .nav-bar li {
+      margin: 0 20px;
+      font-size: 3vh;
+      margin-left: 1.2em;
+      text-align: center;
+    }
+
+    #art-contact-btn {
+      align-self: flex-end;
+    }
+
+    .contact-btn {
+      font-size: 2.5vh;
+      border-style: var(--blue-dark);
+    }
+    /***** HERO SECTION *****/
+  .hero-content {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #ffc600;
+    margin-top: 0;
+  }
+  .hero-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  
+  }
+
+ #hero-title {
+    margin-left: 0.4em;
+    margin-right: 1.4em;
+    margin-top: 1em;
+    text-align:inherit;
+    font-size: 4.6em;
+    z-index: 10;
+ }
+ .hero-p {
+   margin-top: 1em;
+   margin-left: 1.5em;
+   width: 70%;
+   font-size: var(--body-text-mobile);
+ }
+
+ .left-margin {
+  display: flex;
+  align-items: baseline;
+}
 }
